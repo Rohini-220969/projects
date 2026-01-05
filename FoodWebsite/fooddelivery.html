@@ -17,7 +17,7 @@
       </nav>
     </div>
     <div class="right-header">
-        <a href="loginfoodfast.html" class="login-btn" >Login</a>
+        <a href="loginfoodfast.html" onclick="logincheck()" class="login-btn" >Login</a>
     </div>
 
         </header>
@@ -32,6 +32,15 @@
                 <img src="images/food.jpg" alt=" Food Delievery">
             </div>
         </section>
+        <section class="dynamic-section">
+            <h2>Today's Special</h2>
+            <p><strong> FoodName:  </strong> <span id="foodname"></span></p>
+            <p><strong> Price:</strong> &#8377; <span id="foodprice"></span></p>
+            <p><strong>Status:</strong><span id="foodstatus"></span></p>
+            <p><strong >Orders Today:</strong><span id="ordertoday"></span></p>
+            <button onclick="placeOrder()" class="cart-btn">Order Special</button>
+
+        </section>
         <section class="popular-section">
             <h2>Popular Items</h2>
             <div class="popular-container">
@@ -40,14 +49,14 @@
                     <h3>Cheese Burger</h3>
                     <p class="price">₹190</p>
                     <a href="lab2.html">
-                    <button class="cart-btn">Add to Cart</button></a>
+                    <button  onclick="addcart('chesseBurger',190)"class="cart-btn">Add to Cart</button></a>
                 </div>
             <div class="popular-card">
                    <img src="images/frypiece.jpeg"  alt="biryani">
                     <h3>Chiken Fry Piece Biryani</h3>
                     <p class="price">₹320</p>
                     <a href="lab2.html">
-                    <button class="cart-btn">Add to Cart</button></a>
+                    <button  onclick="addcart('chicken fry biryani',320)"class="cart-btn">Add to Cart</button></a>
                 </div>
             <div class="popular-card">
                
@@ -57,7 +66,7 @@
                     <h3>Chiken Noodles</h3>
                     <p class="price">₹180</p>
                      <a href="lab2.html">
-                    <button class="cart-btn">Add to Cart</button>
+                    <button onclick="addcart('chicken noodles',180)" class="cart-btn">Add to Cart</button>
                      </a>
                 </div>
 
@@ -175,7 +184,7 @@
 
             </div>
             <div>
-            <form class="contact-form">
+            <form class="contact-form" onsubmit="submitcontactform();return false;">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
                 <textarea placeholder="Your Message" required></textarea>
@@ -194,4 +203,8 @@
             <p>&copy; 2025 FoodFast. All rights reserved.</p>
         </footer>
     </body>
+    <script src="script.js">
+        
+
+        </script>
 </html>
